@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 导入css样式 -->
+    <link rel="stylesheet" th:href="@{/static/css/Register.css}"/>
+    <!-- 初始化样式 -->
+    <link rel="stylesheet" th:href="@{/static/css/reset.css}"/>
+</head>
+<body>
+    <div class="login">
+        <div class="container">
+            <h1 class="login-title">注册界面</h1>
+            <div class="login-menu">
+                <div class="login-menu-title">现在注册</div>
+                <div class="login-menu-prompt">以下信息带*为必填，请注意检查</div>
+                <div class="line"></div>
+                <form th:action="@{/register}" method="post">
+                    <div class="register-account">
+                        <p class="register-account-form">用户*</p>
+                        <input type="text" class="register-account-input" name="username">
+                    </div>
+                    <div class="register-account">
+                        <p class="register-account-form">密码*</p>
+                        <input type="password" class="register-account-input" name="passwordFirst">
+                    </div>
+                    <div class="register-account">
+                        <p class="register-account-form">确认密码*</p>
+                        <input type="password" class="register-account-input" name="passwordSecond">
+                    </div>
+                    <button type="submit" class="register-button">提交</button>
+                </form>
+                <p class="warn" th:text="${warnerror}"></p>
+                <div class="backLogin">
+                    <a th:href="@{/login}">返回登陆</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

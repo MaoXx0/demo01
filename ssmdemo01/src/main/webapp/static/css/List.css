@@ -1,0 +1,123 @@
+.top-nav {
+    height: 75px;
+    background-color: #39444e;
+}
+
+.top-nav .top-nav-logo {
+    width: 130px;
+    height: 22px;
+    margin-top: 26.5px;
+}
+
+.top-nav-login {
+    line-height: 75px;
+}
+
+.top-nav-login a {
+    float: right;
+    width: 100px;
+    height: 75px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    color: white;
+    transition: background-color 0.5s ease;
+    transition: font-size 0.2s ease;
+}
+
+.top-nav-login a:last-child:hover {
+    background-color: #39444e;
+    font-size: 0px;
+    background-image:url("/static/img/消息.png");
+    background-repeat: no-repeat;  
+    background-size: 50px 50px; 
+    background-position: center center;  
+}
+
+.top-nav-login a:nth-child(2):hover {
+    background-color: #39444e;
+    font-size: 0px;
+    background-image:url("/static/img/退出.png");
+    background-repeat: no-repeat;  
+    background-size: 50px 50px; 
+    background-position: center center;  
+}
+
+.top-nav-login a:first-child:hover {
+    background-color: #39444e;
+    font-size: 0px;
+    background-image:url("/static/img/用户.png");
+    background-repeat: no-repeat;  
+    background-size: 50px 50px; 
+    background-position: center center;  
+}
+
+.mid-context {
+    width: 100%;
+    height: 700px;
+}
+
+.mid-context .mid-context-nav {
+    width: 300px;
+    height: 700px;
+    /* background-color: white; */
+    background:linear-gradient(rgb(221, 221, 245),rgb(238, 231, 235));
+}
+
+
+.mid-context-nav .app-tile {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.mid-context-nav .application {
+    width: 300px;
+    height: 610px;
+}
+
+.mid-context-nav .application a {
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.mid-context-nav .application a:hover {
+    color: wheat;
+    border-radius: 50px;
+    background-color: #39444e;
+}
+
+.mid-context-list{
+    width: 1452px;
+    height: 700px;
+}
+
+.mid-context-list .table {
+    width: 1000px;
+    height: 700px;
+    margin-left: 426px;
+    background-color: silver;
+}
+
+.mid-context-list .table .data {
+    width: 900px;
+    height: 100px;
+    margin: 0 auto;
+    border: 2px solid rebeccapurple;
+}
+
+ tr th {
+    border: 2px solid rebeccapurple;
+}

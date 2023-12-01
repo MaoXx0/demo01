@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/static/css/reset.css}">
+    <style>
+        body {
+            background: linear-gradient(135deg,rgb(155, 222, 155),rgba(212, 172, 127, 0.85));
+        }
+
+        .container {
+            /* 中心板块 */
+            width: 1140px;
+            height: 730px;
+            margin: 64px auto;
+        }
+
+        .only {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .only h1 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .only .sysLogin {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: cadetblue;
+            line-height: 50px;
+            border-radius: 50px;
+            transition: background-color 0.5s ease;
+            transition: color 0.5s ease;
+            cursor: pointer;
+        }
+
+        .only .sysLogin:hover {
+            background-color: darkgrey;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="index">
+        <div class="container">
+            <div class="only">
+                <h1>欢迎来到系统首页</h1>
+                <a th:href="@{/login}" class="sysLogin">登录系统</a>
+            </div>  
+        </div>
+    </div>
+    
+</body>
+</html>

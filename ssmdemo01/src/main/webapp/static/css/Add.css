@@ -1,0 +1,94 @@
+body {
+    /* 背景色 */
+    background: linear-gradient(135deg,rgb(29, 75, 174),rgba(219, 71, 53, 0.85));
+}
+
+.container {
+    /* 中心板块 */
+    width: 1140px;
+    height: 730px;
+    margin: 64px auto;
+}
+
+.container .login-title {
+    width: 425px;
+    height: 50px;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.menu {
+    width: 425px;
+    height: 644px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+}
+
+.add-msg .item-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.add-msg .warn {
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    color: firebrick;
+
+}
+
+.add-msg .item {
+    width: 200px;
+    height: 28px;
+    padding: 0 20px;
+    border-radius: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.lines {
+    margin-top: 10px;
+}
+
+.all-btn {
+    margin-top: 20px;
+    width: 425px;
+    height: 40px;
+}
+
+.btn {
+    width: 150px;
+    height: 35px;
+    border-radius: 40px;
+    background-color:darkgrey;
+    font-weight: bold;
+}
+
+.all-btn .btn:first-child:hover {
+    cursor: pointer;
+    color: white;
+    background-color: brown;
+    transition: background-color 0.5s ease;
+}
+
+.all-btn .btn:last-child:hover {
+    cursor: pointer;
+    color: white;
+    background-color: brown;
+    transition: background-color 0.5s ease;
+}
+
+.return {
+    font-size: 18px;
+    font-weight: bold;
+}

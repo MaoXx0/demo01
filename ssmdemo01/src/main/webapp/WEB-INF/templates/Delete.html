@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/static/css/Delete.css}">
+    <link rel="stylesheet" th:href="@{/static/css/reset.css}">
+</head>
+<body>
+    <div class="add">
+        <div class="container">
+            <h1 class="login-title">删除用户</h1>
+            <div class="menu">
+                <form action="#" method="post" id="formAdd" onsubmit="validateForm()">
+                    <div class="add-msg">
+                        <p class="id item-title">ID</p>
+                        <input type="text" class="item" name="id">
+                        <span class="warn">
+                            根据用户Id删除
+                        </span>
+                    </div>
+                    <hr class="lines">
+                    <div class="all-btn clearfix">
+                        <button type="submit" class="btn leftfix">提交</button>
+                        <button type="reset" class="btn rightfix">重置</button>
+                    </div>
+                </form> 
+                <a th:href="@{/list}" class="return">返回展示面</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

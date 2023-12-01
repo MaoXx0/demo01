@@ -1,0 +1,152 @@
+body {
+    /* 背景色 */
+    background: linear-gradient(135deg,rgb(29, 75, 174),rgba(219, 71, 53, 0.85));
+}
+
+.container {
+    /* 中心板块 */
+    width: 1140px;
+    height: 730px;
+    margin: 64px auto;
+}
+
+.container .login-title {
+    width: 425px;
+    height: 50px;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.login-menu {
+    width: 425px;
+    height: 644px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #fff;
+}
+
+.login-menu-title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+}
+
+.login-menu-prompt {
+    font-size: 18px;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.login-method {
+    padding-bottom: 44px;
+    border-bottom: 1px solid gray;
+}
+
+.login-method .item {
+    width: 172px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    border-radius:5px;
+}
+
+.login-method a:first-child {
+    background-color: #dd4b39;
+}
+
+.login-method a:last-child {
+    background-color: #20d86e;
+}
+
+.account {
+    margin-top: 30px;
+}
+
+.account .account-title {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.account .account-input {
+    width: 385px;
+    height: 45px;
+    padding: 0 20px;
+    border: 1px solid gray;
+}
+
+.chooce {
+    margin:15px 0;
+    height: 25px;
+}
+
+.chooce input{
+    width: 20px;
+    height: 20px;
+    line-height: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.chooce span {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+    vertical-align: middle;
+    cursor: pointer;
+    color: gray;
+}
+
+.account-submit {
+    width: 425px;
+    height: 50px;
+    font-weight: bold;
+    margin-top: 15px;
+    background-color: #333333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+.account-submit:hover {
+    background-color: #20d86e;
+    color: black;
+}
+
+.warn {
+    font-size: 18px;
+    margin-top: 15px;
+    visibility: hidden;
+}
+
+.account-register {
+    font-size: 24px;
+    /* margin-top: 40px; */
+}
+
+.account-register a {
+    color: black;
+    font-weight: bold;
+}
+
+.account-register a:hover {
+    color: skyblue;
+}
+
+
+
+

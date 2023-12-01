@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--
+       MyBatis核心配置文件中的标签必须要按照指定的顺序配置：
+       properties?,settings?,typeAliases?,typeHandlers?,
+       objectFactory?,objectWrapperFactory?,reflectorFactory?,
+       plugins?,environments?,databaseIdProvider?,mappers?
+   -->
+
+    <settings>
+        <!--将下划线映射为驼峰-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+
+        <!--
+           开启延迟加载，此时就可以实现按需加载，获取的数据是什么，就只会执行相应的sql
+           如：只需要调用emp表的方法，那么就不会因为分布查询而吧第二步或者第三步的表一起查询
+       -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
+
+    <plugins>
+        <!--配置分页插件-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"/>
+    </plugins>
+
+</configuration>

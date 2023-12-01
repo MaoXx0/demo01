@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/static/css/Modify.css}">
+    <link rel="stylesheet" th:href="@{/static/css/reset.css}">
+</head>
+<body>
+    <div class="add">
+        <div class="container">
+            <h1 class="login-title">修改信息</h1>
+            <div class="menu">
+                <form th:action="@{/modifyByMsg}" method="post" id="formAdd">
+                    <input type="hidden" name="_method" value="put">
+                    <div class="add-msg">
+                        <p class="id item-title">ID</p>
+                        <input type="text" class="item" name="id" th:value="${employees.id}">
+                        <span class="warn">
+                            <img th:src="@{/static/img/icon_通用_对错_错.png}" alt="选择ID">
+                        </span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">UserName</p>
+                        <input type="text" class="item" name="username" id="username" th:value="${employees.username}">
+                        <span class="warn">
+                            <img th:src="@{/static/img/success.png}" alt="可以修改username">
+                        </span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">Age</p>
+                        <input type="text" class="item" name="age" id="age" th:value="${employees.age}">
+                        <span class="warn">
+                            <img th:src="@{/static/img/success.png}" alt="可以修改age">
+                        </span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">Birthday</p>
+                        <input type="date" class="item" name="birthday" th:value="${employees.birthday}">
+                        <span class="warn">
+                            <img th:src="@{/static/img/icon_通用_对错_错.png}" alt="禁止修改出生日期">
+                        </span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">Email</p>
+                        <input type="text" class="item email" name="email" id="email" th:value="${employees.email}">
+                        <span class="warn">
+                            <img th:src="@{/static/img/success.png}" alt="可以修改Email">
+                        </span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">Address</p> <!--th:value="${employees.address}"-->
+                        <input type="text" class="item" name="address" th:value="${employees.address}">
+                        <span class="warn">
+                            <img th:src="@{/static/img/success.png}" alt="可以修改Address">
+                        </span>
+                    </div>
+                    <hr class="lines">
+                    <div class="all-btn clearfix">
+                        <button type="submit" class="btn leftfix">提交</button>
+                        <button type="reset" class="btn rightfix">重置</button>
+                    </div>
+                </form> 
+                <a th:href="@{/list}" class="return">返回展示面</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

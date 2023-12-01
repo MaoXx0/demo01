@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.EmployeeMapper">
+    <!--
+        Integer addEmployee(@Param("id")Integer id, @Param("username")String username, @Param("age")Integer age,
+                        @Param("birthday")Date birthday,@Param("email")String email,@Param("address")String address);
+    -->
+    <insert id="addEmployee">
+        insert into mytest_employee values (#{id},#{username},#{age},#{birthday},#{email},#{address})
+    </insert>
+
+
+    <!--AddEmployee findByUsername(@Param("username")String username);-->
+    <select id="findByUsername" resultType="AddEmployee">
+        select * from mytest_employee where username = #{username}
+    </select>
+
+    <!--AddEmployee findById(@Param("id")Integer id)-->
+    <select id="findById" resultType="AddEmployee">
+        select * from mytest_employee where id = #{id}
+    </select>
+
+    <!--
+        Integer modifyEmployee(@Param("id")Integer id, @Param("username")String username, @Param("age")Integer age,
+                        @Param("birthday")String birthday,@Param("email")String email,@Param("address")String address);
+    -->
+    <update id="modifyEmployee">
+        update mytest_employee
+        set username = #{username} , age = #{age} , email = #{email} , address = #{address}
+        where id = #{id}
+    </update>
+
+    <!--Integer deleteEmployee(@Param("id")Integer id);-->
+    <delete id="deleteEmployee">
+        delete from mytest_employee where id = #{id}
+    </delete>
+
+    <!--List<AddEmployee> getAllEmployee();-->
+    <select id="getAllEmployee" resultType="AddEmployee">
+        select * from mytest_employee
+    </select>
+
+
+
+</mapper>

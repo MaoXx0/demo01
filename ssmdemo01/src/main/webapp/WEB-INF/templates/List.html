@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>展示界面</title>
+    <link rel="stylesheet" th:href="@{/static/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/static/css/List.css}">
+</head>
+<body>
+    <div class="list">
+        <!-- 顶部栏 -->
+        <div class="top-nav clearfix">
+            <div class="top-nav-logo leftfix">
+                <img src="../img/logo.png" alt="">
+            </div>
+            <div class="top-nav-listed rightfix">
+                <ul class="top-nav-login clearfix">
+                    <a href="#">用户</a>
+                    <a th:href="@{/login}">退出</a>
+                    <a href="#">消息</a>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 内容栏 -->
+        <div class="mid-context clearfix">
+            <div class="mid-context-nav leftfix">
+                <h1 class="app-tile">用户功能栏</h1>
+                <hr>
+                <div class="application">
+                    <a th:href="@{/addShow}">---增加---</a>
+                    <a href="#">---删除---</a>
+                    <a href="#">---修改---</a>
+                    <a href="#">---查询---</a>
+                </div>
+            </div>
+            <div class="mid-context-list">
+                <div class="table">
+                    <table class="data" >
+                        <tr id="data-title">
+                            <th colspan="7">员工信息</th>
+                        </tr>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Age</th>
+                            <th>Birthday</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Choose</th>
+                        </tr>
+                        <tr th:each="employee : ${allEmployee}">
+                            <th th:text="${employee.id}"></th>
+                            <th th:text="${employee.username}"></th>
+                            <th th:text="${employee.age}"></th>
+                            <th th:text="${employee.birthday}"></th>
+                            <th th:text="${employee.email}"></th>
+                            <th th:text="${employee.address}"></th>
+                            <th>
+                                <a @onclick="deleteEmployee" th:href="@{'/delete/'+${employee.id}}" id="deleteMsg">删除</a>
+                                <a th:href="@{'/modifyById/'+${employee.id}}" id="modifyMsg">修改</a>
+                                <!--<a th:href="@{/modifyByMsgShow}" id="modifyMsg">修改</a>-->
+                            </th>
+                        </tr>
+                    </table>
+                    <form id="deleteForm" method="post">
+                        <input type="hidden" name="_method" value="delete">
+                    </form>
+                    <script type="text/javascript" th:src="@{/static/js.vue.js}"></script>
+                    <script type="text/javascript">
+                        var vue = new Vue({
+                            el:".data",
+                            method:{
+                                deleteEmployee:function (event) {
+                                    var deleteForm = document.getElementById("deleteForm");
+                                    deleteForm.action = event.target.href;
+                                    deleteForm.submit();
+                                    event.preventDefault();
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+body {
+    /* 背景色 */
+    background: linear-gradient(135deg,rgb(29, 75, 174),rgba(219, 71, 53, 0.85));
+}
+
+.container {
+    /* 中心板块 */
+    width: 1140px;
+    height: 730px;
+    margin: 64px auto;
+}
+
+.container .login-title {
+    width: 425px;
+    height: 50px;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.login-menu {
+    width: 425px;
+    height: 644px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #fff;
+}
+
+.login-menu-title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+}
+
+.login-menu-prompt {
+    font-size: 18px;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.line {
+    height: 1px;
+    background-color: gray;
+}
+
+.register-account .register-account-form {
+    font-size: 20px;
+    margin: 15px 0px;
+    color: gray;
+}
+
+.register-account .register-account-input {
+    width: 393px;
+    height: 48px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    padding: 0 15px;
+}
+
+.register-button {
+    width: 425px;
+    height: 40px;
+    margin-top: 40px;
+    background-color: darkslategray;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+.register-button:hover {
+    background-color: seagreen;
+    color: seashell;
+}
+
+.warn {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.backLogin {
+    font-size: 20px;
+    margin: 20px 0;
+}

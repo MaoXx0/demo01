@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <!--导入css样式-->
+    <link rel="stylesheet" th:href="@{/static/css/Login.css}"/>
+    <!-- 初始化样式 -->
+    <link rel="stylesheet" th:href="@{/static/css/reset.css}"/>
+    <script>
+        function warnError() {
+            var warn = document.getElementsByClassName("warn");
+            warn.style.visibility = "visible"
+        }
+    </script>
+</head>
+<body>
+    <div class="login">
+        <div class="container">
+            <h1 class="login-title">登陆界面</h1>
+            <div class="login-menu">
+                <div class="login-menu-title">现在登陆</div>
+                <div class="login-menu-prompt">以下您可以自主选择其他方式登录</div>
+                <div class="login-method clearfix">
+                    <a href="#" class="item leftfix">网易</a>
+                    <a href="#" class="item rightfix">微信</a>
+                </div>
+                <form th:action="@{/login}" method="post">
+                    <div class="account">
+                        <p class="account-title">Username</p>
+                        <input type="text" class="account-input" name="username">
+                    </div>
+                    <div class="account">
+                        <p class="account-title">Password</p>
+                        <input type="password" class="account-input" name="password">
+                    </div>
+                    <div class="chooce">
+                        <input type="checkbox">
+                        <span >是否让我们记住账号</span>
+                    </div>
+                    <button class="account-submit" onclick="warnError()" type="submit">提交</button>
+                    <p class="warn" th:text="${warnerror}" ></p>
+                    <p class="account-register">
+                        如果没有账号请
+                        <a th:href="@{/registerShow}">注册</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

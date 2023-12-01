@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/static/css/Add.css}">
+    <link rel="stylesheet" th:href="@{/static/css/reset.css}">
+</head>
+<body>
+    <div class="add">
+        <div class="container">
+            <h1 class="login-title">添加信息</h1>
+            <div class="menu">
+                <form th:action="@{/add}" method="get" class="formAdd">
+                    <div class="add-msg">
+                        <p class="id item-title">ID</p>
+                        <input type="text" class="item" name="id">
+                        <span class="warn">ID必须为六位数</span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">UserName</p>
+                        <input type="text" class="item" name="username" value="张三">
+                        <span class="warn">用户姓名</span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">Age</p>
+                        <input type="text" class="item" name="age" value="18">
+                        <span class="warn">用户年龄</span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">Birthday</p>
+                        <input type="date" class="item" name="birthday" value="2023-11-26">
+                        <span class="warn">用户出生日期</span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">Email</p>
+                        <input type="text" class="item email" name="email">
+                        <span class="warn">用户邮箱</span>
+                    </div>
+                    <hr class="lines">
+                    <div class="add-msg">
+                        <p class="id item-title">Address</p>
+                        <input type="text" class="item" name="address">
+                        <span class="warn">用户居住地址</span>
+                    </div>
+                    <hr class="lines">
+                    <div class="all-btn clearfix">
+                        <button type="submit" class="btn leftfix">提交</button>
+                        <button type="reset" class="btn rightfix">重置</button>
+                    </div>
+                </form>
+                <p class="warn" th:text="${warn}"></p>
+                <a th:href="@{/list}" class="return">返回展示面</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
