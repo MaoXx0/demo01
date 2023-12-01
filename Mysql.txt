@@ -1,0 +1,18 @@
+两张表
+
+员工表：
+CREATE TABLE mytest_employeeadd (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	username VARCHAR(20) NOT NULL DEFAULT 'smith',
+	age INT,
+	birthday DATE,
+	email VARCHAR(30) NOT NULL DEFAULT 'new@add.com',
+	address VARCHAR(35) NOT NULL DEFAULT '福建省'
+)`mytest_employee`
+
+登录表
+CREATE TABLE mytest_userlogin (
+	id INT PRIMARY KEY AUTO_INCRAMENT,
+	username VARCHAR(20),
+	password VARCHAR(30)
+)
